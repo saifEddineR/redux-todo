@@ -7,9 +7,7 @@ function App() {
   console.log(todo);
   return (
     <div className='App-header'>
-      <button onClick={() => dispatch({ type: 'INCREMENT' })}>
-        +
-      </button>
+      <button onClick={() => dispatch({ type: 'TEST' })}>+</button>
     </div>
   );
 }
