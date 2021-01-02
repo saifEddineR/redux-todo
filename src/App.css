@@ -1,10 +1,44 @@
 .App-header {
+  padding-top: 10px;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.add-todo {
+  display: flex;
+  align-content: center;
+}
+.add-todo input {
+  margin-right: 20px;
+}
+.todo-task {
+  width: 500px;
+  padding: 15px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+}
+.todo-task form * {
+  margin: 0 10px;
+}
+div h3 {
+  margin-bottom: 20px;
+}
+.edit-task-click {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: lightblue;
+}
+.edit-task {
+  display: flex;
+  align-content: center;
+}
+.edit-task input {
+  width: 200px;
+  margin-right: 10px;
 }
