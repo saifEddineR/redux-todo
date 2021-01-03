@@ -11,7 +11,6 @@ const AddTodo = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(ADD_TODO(input));
-    console.log('addtodo state', props);
     setInput('');
   };
 

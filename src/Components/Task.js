@@ -10,8 +10,9 @@ const Task = ({ id, desc, isDone }) => {
 
   const handleChangeInput = (event) => {
     event.preventDefault();
-    console.log('input', changeInput);
-    dispatch(BTN_CHANGE(id, changeInput));
+    if (changeInput.trim().length > 0) {
+      dispatch(BTN_CHANGE(id, changeInput));
+    }
     setEditTask(false);
     setChangeInput('');
   };
@@ -28,19 +29,12 @@ const Task = ({ id, desc, isDone }) => {
               value={changeInput}
               onChange={(e) => setChangeInput(e.target.value)}
             />
-            <Button
-              variant='dark'
-              type='submit'
-              onClick={handleChangeInput}
-            >
+            <Button variant='dark' type='submit' onClick={handleChangeInput}>
               change
             </Button>
           </span>
         ) : (
-          <p
-            className='edit-task-click'
-            onClick={() => setEditTask(true)}
-          >
+          <p className='edit-task-click' onClick={() => setEditTask(true)}>
             Edit Task
           </p>
         )}
@@ -49,23 +43,17 @@ const Task = ({ id, desc, isDone }) => {
       <form>
         {isDone ? (
           <Button
-            variant='success'
+            variant='outline-success'
             onClick={() => dispatch(BTN_DONE(id))}
           >
             Undone
           </Button>
         ) : (
-          <Button
-            variant='success'
-            onClick={() => dispatch(BTN_DONE(id))}
-          >
+          <Button variant='success' onClick={() => dispatch(BTN_DONE(id))}>
             done
           </Button>
         )}
-        <Button
-          variant='danger'
-          onClick={() => dispatch(BTN_REMOVE(id))}
-        >
+        <Button variant='danger' onClick={() => dispatch(BTN_REMOVE(id))}>
           remove
         </Button>
       </form>
