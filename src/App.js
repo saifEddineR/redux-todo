@@ -5,14 +5,11 @@ import TodoList from './Components/TodoList';
 import Filter from './Components/Filter';
 
 function App() {
-  // const todo = useSelector((state) => state.todoReducer);
-  // const dispatch = useDispatch();
-
   return (
     <div className='App-header'>
-      <h3>JUST DO IT</h3>
-      <AddTodo />
+      <h3>JUST DO IT.</h3>
       <Filter />
+      <AddTodo />
       <TodoList />
     </div>
   );

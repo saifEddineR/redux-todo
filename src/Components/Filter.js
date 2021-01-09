@@ -4,17 +4,9 @@ import { FILTER_DONE, FILTER_UNDONE, FILTER_ALL } from '../redux/actions';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const [filter, setFilter] = useState({
-    all: true,
-    done: false,
-    undone: false,
-  });
   const handleFilter = (event) => {
     let id = event.target.id;
-    let checked = event.target.checked;
-    setFilter({ ...filter, [id]: checked });
     dispatch(FILTER_ALL(id));
-    setFilter({ all: true, done: false, undone: false });
   };
 
   return (

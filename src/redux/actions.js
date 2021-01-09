@@ -30,18 +30,6 @@ export const BTN_CHANGE = (id, input) => {
     },
   };
 };
-export const FILTER_DONE = (filter) => {
-  return {
-    type: 'FILTER_DONE',
-    payload: filter,
-  };
-};
-export const FILTER_UNDONE = (filter) => {
-  return {
-    type: 'FILTER_UNDONE',
-    payload: filter,
-  };
-};
 export const FILTER_ALL = (id) => {
   return {
     type: 'FILTER_ALL',

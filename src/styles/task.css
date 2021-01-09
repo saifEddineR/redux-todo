@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+/* done / undone button + text check */
+.btn-check {
+  display: flex;
+  align-content: center;
+}
+.btn-check p {
+  font-family: 'Redressed', cursive;
+  font-size: 26px;
+}
+.btn-undone {
+  color: grey;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+.btn-done {
+  color: lightgreen;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+.text-done {
+  text-decoration: line-through;
+}
+/* button remove */
+.btn-remove {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.btn-remove:hover * {
+  opacity: 1;
+  color: red;
+}
+.btn-remove * {
+  width: 20px;
+  height: 20px;
+  color: #ff2121;
+  opacity: 0.9;
+}

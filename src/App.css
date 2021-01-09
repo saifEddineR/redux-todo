@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
 .App-header {
   padding-top: 10px;
-  background-color: #282c34;
+  background-image: linear-gradient(to right, #1b395cfd, #185499fd);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,15 +10,58 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-header h3 {
+  font-family: 'Potta One', cursive;
+  margin: 0;
+  padding-bottom: 10px;
+}
+/* add form : input + button -------------------------- */
 .add-todo {
   display: flex;
   align-content: center;
+  position: relative;
+  height: 35px;
+  opacity: 0.8;
+}
+.add-todo input {
+  width: 300px;
+}
+.add-todo input:focus {
+  border: none;
+}
+.btn-add {
+  position: absolute;
+  right: 8%;
+  top: 0%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+}
+.btn-add:hover * {
+  color: dodgerblue;
+}
+.btn-add * {
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.add-todo button {
+  visibility: hidden;
+  display: none;
 }
 .add-todo input {
   margin-right: 20px;
 }
+/* task card  -------------------------------- */
 .todo-task {
   width: 500px;
+  height: 100px;
   padding: 15px 0 5px 0;
   display: flex;
   justify-content: space-between;
@@ -43,6 +88,29 @@ div h3 {
   width: 200px;
   margin-right: 10px;
 }
+/* filter input radio - label ---------------- */
+.filter-input {
+  padding: 0 40px 0 0;
+  font-size: 20px;
+  font-family: cursive;
+}
+.filter-input form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 30px;
+}
+.filter-input input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+  width: 1em;
+  height: 0.8em;
+  border-radius: 50%;
+  border: 0.1em solid currentColor;
+}
 .filter-input * {
+  cursor: pointer;
   margin-left: 10px;
 }

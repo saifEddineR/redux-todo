@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { MdAddBox } from 'react-icons/md';
 import { Button } from 'react-bootstrap';
 import { ADD_TODO } from '../redux/actions';
 import { useDispatch } from 'react-redux';
@@ -19,12 +20,17 @@ const AddTodo = (props) => {
       <form className='add-todo'>
         <input
           type='text'
+          placeholder='add a task'
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
-        <Button variant='dark' type='submit' onClick={handleSubmit}>
-          Add to List
-        </Button>
+        <span onClick={handleSubmit} className='btn-add'>
+          <MdAddBox />
+        </span>
+        <button type='submit' onClick={handleSubmit}></button>
+        {/* <button className='btn-add' type='submit' onClick={handleSubmit}>
+          <MdAddBox />
+        </button> */}
       </form>
     </div>
   );

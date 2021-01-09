@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
+import task from '../styles/task.css';
+// react icons
+import { AiFillCheckCircle } from 'react-icons/ai';
+import { FaTrash } from 'react-icons/fa';
+// react bootstrap
 import { Button } from 'react-bootstrap';
+// redux related
 import { useDispatch } from 'react-redux';
 import { BTN_REMOVE, BTN_DONE, BTN_CHANGE } from '../redux/actions';
 
@@ -20,7 +26,22 @@ const Task = ({ id, desc, isDone }) => {
   return (
     <div className='todo-task'>
       <div>
-        <p> {desc} </p>
+        {/* --------------- done button + text --------------- */}
+        {isDone ? (
+          <span className='btn-check'>
+            <span className='btn-done' onClick={() => dispatch(BTN_DONE(id))}>
+              <AiFillCheckCircle />
+            </span>
+            <p className='text-done'> {desc} </p>
+          </span>
+        ) : (
+          <span className='btn-check'>
+            <span className='btn-undone' onClick={() => dispatch(BTN_DONE(id))}>
+              <AiFillCheckCircle />
+            </span>
+            <p> {desc} </p>
+          </span>
+        )}
         {/* ------------ edit task input + button --------------- */}
         {editTask ? (
           <span className='edit-task'>
@@ -39,23 +60,11 @@ const Task = ({ id, desc, isDone }) => {
           </p>
         )}
       </div>
-      {/* ------------ done / remove buttons --------------- */}
+      {/* ------------remove buttons --------------- */}
       <form>
-        {isDone ? (
-          <Button
-            variant='outline-success'
-            onClick={() => dispatch(BTN_DONE(id))}
-          >
-            Undone
-          </Button>
-        ) : (
-          <Button variant='success' onClick={() => dispatch(BTN_DONE(id))}>
-            done
-          </Button>
-        )}
-        <Button variant='danger' onClick={() => dispatch(BTN_REMOVE(id))}>
-          remove
-        </Button>
+        <span className='btn-remove' onClick={() => dispatch(BTN_REMOVE(id))}>
+          <FaTrash />
+        </span>
       </form>
     </div>
   );
