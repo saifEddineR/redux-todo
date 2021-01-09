@@ -23,6 +23,54 @@
 .text-done {
   text-decoration: line-through;
 }
+/* task card  -------------------------------- */
+.todo-task {
+  width: 500px;
+  height: 80px;
+  padding: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+}
+.todo-task form * {
+  margin: 0 10px;
+}
+/* change title edit button + input/btn */
+.edit-task-click {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: lightblue;
+  cursor: pointer;
+  height: 30px;
+  font-size: 20px;
+}
+.edit-task {
+  display: flex;
+  height: 30px;
+  opacity: 0.85;
+}
+.edit-task input {
+  width: 200px;
+  margin-right: 10px;
+}
+.edit-task span {
+  background-color: dodgerblue;
+  border-radius: 30%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+/* div edit btn and remove btn */
+.edit-remove {
+  display: flex;
+  align-content: center;
+  padding-top: 10px;
+}
 /* button remove */
 .btn-remove {
   padding: 0;

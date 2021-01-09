@@ -13,11 +13,11 @@ const Filter = () => {
     <div>
       <form className='filter-input'>
         <input type='radio' id='all' name='filter' onChange={handleFilter} />
-        <label htmlFor='all'>all</label>
+        <label htmlFor='all'>All</label>
         <input type='radio' id='done' name='filter' onChange={handleFilter} />
-        <label htmlFor='done'>done</label>
+        <label htmlFor='done'>Done</label>
         <input type='radio' id='undone' name='filter' onChange={handleFilter} />
-        <label htmlFor='undone'>undone</label>
+        <label htmlFor='undone'>Not-done</label>
       </form>
     </div>
   );

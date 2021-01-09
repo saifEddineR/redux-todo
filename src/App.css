@@ -58,36 +58,7 @@
 .add-todo input {
   margin-right: 20px;
 }
-/* task card  -------------------------------- */
-.todo-task {
-  width: 500px;
-  height: 100px;
-  padding: 15px 0 5px 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid white;
-}
-.todo-task form * {
-  margin: 0 10px;
-}
-div h3 {
-  margin-bottom: 20px;
-}
-.edit-task-click {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  color: lightblue;
-  cursor: pointer;
-}
-.edit-task {
-  display: flex;
-  align-content: center;
-}
-.edit-task input {
-  width: 200px;
-  margin-right: 10px;
-}
+
 /* filter input radio - label ---------------- */
 .filter-input {
   padding: 0 40px 0 0;
